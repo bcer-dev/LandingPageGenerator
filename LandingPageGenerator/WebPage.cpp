@@ -44,9 +44,12 @@ void WebPage::ReadValues()
 void WebPage::Create()
 {
     std::ofstream htmlFile(FileName(), std::ios::out);
+
     htmlFile << "<!DOCTYPE html>\n";
     htmlFile << "<html>\n";
     htmlFile << GetHeadTag() << "\n";
     htmlFile << GetBodyTag() << "\n";
     htmlFile << "</html>";
+
+    htmlFile.close();
 }
